@@ -1,0 +1,9 @@
+ultralytics~=8.2.63
+opencv-python~=4.10.0.84
+pillow~=10.4.0
+fastapi~=0.111.1
+gradio~=4.41.0
+requests~=2.32.3
+pyprojroot~=0.3.0
+PyYAML~=6.0.1
+python-dotenv~=1.0.1

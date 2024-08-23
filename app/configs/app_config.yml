@@ -1,0 +1,5 @@
+directories:
+    inference_folder: "data/inference"
+
+serve:
+    fastapi_endpoint: "http://localhost:8080"
