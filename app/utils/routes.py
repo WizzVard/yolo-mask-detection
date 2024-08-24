@@ -10,6 +10,7 @@ CONFIG = LoadConfig()
 
 yolo_inference = YoloInference()
 
+
 @app.get('/')
 def home() -> Dict[str, Union[int, Dict[str, Any]]]:
     """Ping method for checking API status"""
