@@ -1,6 +1,6 @@
 from typing import Dict, Union, Any
 from main import app
-from model.model import inference_on_img, draw_bounding_boxes
+from model.model import YoloInference
 from fastapi import Request
 from PIL import Image
 from utils.load_config import LoadConfig
@@ -8,6 +8,7 @@ import os
 
 CONFIG = LoadConfig()
 
+yolo_inference = YoloInference()
 
 @app.get('/')
 def home() -> Dict[str, Union[int, Dict[str, Any]]]:
@@ -35,10 +36,10 @@ async def detect_img(request: Request) -> Dict[str, Union[int, Dict[str, Any]]]:
     # Run inference on the received image
     try:
         image = Image.open(temp_image_path)
-        inference_results_data = inference_on_img(img=image)
+        inference_results_data = yolo_inference.inference_on_img(img=image)
 
         # Draw bounding boxes and save the image (in the same path or a new one)
-        draw_bounding_boxes(temp_image_path, inference_results_data)
+        yolo_inference.draw_bounding_boxes(temp_image_path, inference_results_data)
 
     except Exception as err:
         print(f'An error occurred while trying to perform inference. {err}')
