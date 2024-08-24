@@ -1,18 +1,19 @@
-# Object Detection With YOLO v8
+# Mask Detection With YOLO v8
 
-Object Detection With YOLO v8 is an AI-powered project that allows users to upload images and receive real-time object detection results using the YOLOv8 model. The project is designed to run in a Dockerized environment and leverages FastAPI for efficient backend processing, along with a Gradio interface for a seamless user experience.
+Mask Detection is an AI-powered project that enables users to upload images and receive real-time detection results for masks using the finetuned YOLOv8n model. The project is designed to operate within a Dockerized environment, utilizing FastAPI for efficient backend processing, and features a Gradio interface for a seamless user experience.
 
 ## Key Features
 
-- **YOLOv8 Model:** Utilizes the YOLOv8 model from Ultralytics for high-accuracy object detection across various types of images.
+- **YOLOv8n Model:** Leverages the YOLOv8n model from Ultralytics, finetuned on a specialized masks dataset, to achieve high-accuracy mask detection in various images.
 - **FastAPI Backend:** Implements FastAPI for a fast, robust, and scalable backend, ensuring efficient handling of image uploads and model inference.
 - **Dockerized Environment:** Runs in a Docker container, providing an isolated and consistent environment for deployment across different platforms.
-- **Gradio Interface:** Features a user-friendly Gradio interface, allowing users to easily upload images and view detection results within a web-based application.
+- **Gradio Interface:** Features a user-friendly Gradio interface, allowing users to easily upload images and view mask detection results within a web-based application.
 
 ## Demo Thumbnail
 
-Below are sample thumbnails of the detected objects in uploaded images:
+Below are sample thumbnails of the detected masks in uploaded images:
 
+![Thumbnail 1](files/object_detection1.png) ![Thumbnail 2](files/object_detection2.png)
 
 ## Installation
 
@@ -23,10 +24,10 @@ Below are sample thumbnails of the detected objects in uploaded images:
 ## Usage
 
 1. Start the Docker container with the FastAPI application.
-2. Access the Gradio interface through the provided URL.
+2. Run interface.py to access the Gradio interface through the provided URL.
 3. Upload an image via the Gradio interface.
-4. View the detected objects in the output window.
+4. View the detected masks in the output window and the number of detected classes.
 
 ---
 
-Object Detection With YOLO v8 is crafted to deliver precise object detection results by leveraging the powerful YOLOv8 model, all within a user-friendly and highly efficient environment.
+Mask Detection is designed to deliver precise mask detection results by leveraging the powerful, finetuned YOLOv8n model, all within a user-friendly and highly efficient environment.
